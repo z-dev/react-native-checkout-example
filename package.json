@@ -9,7 +9,8 @@
 	"dependencies": {
 		"react": "16.0.0-alpha.12",
 		"react-native": "0.48.4",
-		"react-native-checkout": "file:../react-native-checkout",
+		"react-native-awesome-card-io": "^0.7.0",
+		"react-native-checkout": "0.0.6",
 		"react-navigation": "^1.0.0-beta.13"
 	},
 	"devDependencies": {
