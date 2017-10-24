@@ -1,8 +1,19 @@
 import React, { Component } from 'react'
 import {
-  View
+  View,
+  Text,
+  TouchableOpacity
 } from 'react-native'
 import { AddCard } from 'react-native-checkout'
+
+const MyScanCardContainer = (props) => {
+  return <View style={{ flex: 1 }}>
+    <TouchableOpacity onPress={() => props.onClose()} style={{marginTop: 20, padding: 20, width: 150}}>
+      <Text style={{fontSize: 18}}>Close</Text>
+    </TouchableOpacity>
+    {props.children}
+  </View>
+}
 
 export default () => {
   return (
@@ -25,6 +36,7 @@ export default () => {
         addCardButtonText="Add Card"
         scanCardButtonText="Scan Card"
         scanCardAfterScanButtonText="Scan Card Again"
+        scanCardContainer={MyScanCardContainer}
       />
     </View>
   )
